@@ -1,0 +1,24 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: powderblue;
+}
+div{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+ul{
+    display: table; 
+     margin: 0 auto;
+}
+.last
+{
+    margin-top:200px;
+    display: inline-block;
+    background-color:grey;
+    border: 2px solid black;
+    border-style: dotted;
+    border-radius: 5px;
+    padding-left: 10px;
+}

@@ -1,0 +1,14 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: blanchedalmond;
+}
+div{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+ul{
+    display: table; 
+     margin: 0 auto;
+}

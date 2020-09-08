@@ -1,0 +1,42 @@
+body
+{
+    background-color: rosybrown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+    font-weight: bolder;
+
+}
+.input
+{
+    height: 50px;
+    margin-bottom:16px;
+   padding-left:50px;
+   font-size:25px;
+}
+button
+{
+    /* margin-left:120px; */
+    font-size: 15px;
+    font-weight:bold;
+    background-color: slategrey;
+    width:100px;
+    height:50px;
+}
+.lastdiv
+{
+    margin-top:20px;
+    display: inline-block;
+    background-color:grey;
+    border: 2px solid black;
+    border-style: dotted;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+
+
+
