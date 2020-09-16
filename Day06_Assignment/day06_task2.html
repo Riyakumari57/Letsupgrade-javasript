@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<!--
+Day06 -Task 02
+ Create a blank array
+and later on create a add bus functionality
+bus object contains {name, source, destination, number, passenger capacity}
+A. A form to add new bus
+B. Display data in table format
+C. Search by source and destination
+D. Data should be stored permanently in localstorage -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-06 task2</title>
+    <style>
+
+
+        body
+    {
+        background-color:rgb(248, 198, 248);
+    }
+
+    *
+    /* asteriks is a universal selector, it will select all the elements present in our html code */
+    {
+        margin:0px;
+        padding:0px;
+    }
+
+        .info
+    {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        /* height: 60%; */
+        width: 80%;
+        background-color:lightyellow;
+        margin-left: 10%;
+        margin-top: 100px;
+        padding: 20px;
+        display: block;
+        text-align: center;
+        border-color: black;
+        border-width: 2px;
+        border-style:dashed;
+        border-radius: 30px;
+
+    
+    }
+    .table
+    {
+        margin-top: 50px;
+        width: 100%;
+       
+    }
+        th ,td
+    {
+      height: 40px;
+      text-align: center;
+      font-size: 25px;
+      padding: 5px;
+    }
+    button
+    {
+        padding:10px;
+        height:50px;
+        width: 90px;
+        margin-left: 20px;
+    }
+    .search
+    {
+        display: block;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        /* text-align: center; */
+    }
+
+    input
+    {
+        border-color:black;
+        border-radius: 5px;
+        border-width: 2px;
+        border-style: solid;
+        height: 40px;
+        text-indent:20px;
+        padding-left: 20px;
+        margin-left: 25px;
+        
+    }
+
+    .form
+    {
+     
+     margin-top: 60px;
+     margin-bottom: 10px;
+     text-align: center;
+     
+    }
+
+
+    </style>
+</head>
+<body>
+
+    
+    <div class="info">
+        <h1  class="" style="text-align: center; margin-top: 40px;" ><u>BUSES</u></h1>
+
+        <div class="form">
+
+            <form >
+            <input type="text" required placeholder="Name" id="name"/>
+            <input type="text" required placeholder="source" id="source"/>
+            <input type="text" required placeholder="destination" id="destination"/>
+            <input type="text" required placeholder="number" id="number"/>
+            <input type="text" required placeholder="passenger_capacity" id="passenger_capacity"/>
+            <button type="submit" onclick="addbus(event)">Add Bus</button> 
+            <!-- The By Default activity of submit button is to refresh the page -->
+            <!--
+             ~ whenever we perform event handelling there is a event object which is by default availabe
+             ~ it depends on us whether we want to use it or not
+             ~ whenever we call a function we just have to pass the event object under paranthesis
+             ~ event object contains all the details for that event for which it is used
+             ~ child of window -->
+             </form>
+            </div>
+            <h2 style="text-align:center; margin-top: 40px;"><u>SEARCH</u></h2>
+
+        <div class="search">
+            <input type="text" id="searchsource"placeholder="Search Source" onkeyup="searchSource()"/>
+            <input type="text" id="searchdestination"placeholder="Search Destination" onkeyup="searchDestination()"/>
+        </div>
+
+    <table border="3"  class="table">
+        <thead>
+            <tr>
+                <th style="font-size: 25px;"> Sr no</th>
+                <th style="font-size: 25px;"> Name</th>
+                <th style="font-size: 25px;"> Source</th>
+                <th style="font-size: 25px;"> Destination</th>
+                <th style="font-size: 25px;"> Number</th>
+                <th style="font-size: 25px;"> Passenger capacity</th>
+            </tr>
+        </thead>
+        <tbody id="tdata">
+        </tbody>
+    </table>
+    </div>
+
+
+
+    
+    <script src="day06_task2.js"></script>
+    
+</body>
+</html>

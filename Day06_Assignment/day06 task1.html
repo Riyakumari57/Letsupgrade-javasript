@@ -1,0 +1,111 @@
+<!-- Task -01
+Create an array containing five objects with properties { name, age , city , salary }
+A. Display all the objects in a table
+B. Create a search functionality for name and city
+C. Delete button to delete records
+D. Data is not permanent -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-06 task1</title>
+    <style>
+
+    body
+    {
+        background-color:black;
+    }
+
+    *
+    /* asteriks is a universal selector, it will select all the elements present in our html code */
+    {
+        margin:0px;
+        padding:0px;
+    }
+
+        .info
+    {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        /* height: 60%; */
+        width: 80%;
+        background-color:white;
+        margin-left: 10%;
+        margin-top: 100px;
+        padding: 20px;
+        display: block;
+        text-align: center;
+        border-color: black;
+        border-width: 2px;
+        border-style: dotted;
+
+    
+    }
+    .table
+    {
+        margin-top: 50px;
+        width: 100%;
+       
+    }
+        th ,td
+    {
+      height: 40px;
+      text-align: center;
+      font-size: 25px;
+      padding: 5px;
+    }
+    button
+    {
+        padding:10px;
+    }
+    .search
+    {
+        display: block;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        /* text-align: center; */
+    }
+
+    input
+    {
+        border-color: black;
+        border-radius: 5px;
+        border-width: 2px;
+        border-style: solid;
+        height: 40px;
+        text-indent:20px;
+        padding-left: 20px;
+        
+    }
+    </style>
+   
+</head>
+<body>
+    <div class="info">
+        <h1  class="" style="text-align: center; margin-top: 40px;" ><u>INFORMATION</u></h1>
+        <div class="search">
+            <input type="text" id="searchName"placeholder="Search name" onkeyup="searchByname()"/>
+            <input type="text" id="searchCity"placeholder="Search city" onkeyup="searchBycity()"/>
+        </div>
+    <table border="3"  class="table">
+        <thead>
+            <tr>
+                <th style="font-size: 25px;"> Sr no</th>
+                <th style="font-size: 25px;"> Name</th>
+                <th style="font-size: 25px;"> Age</th>
+                <th style="font-size: 25px;">City</th>
+                <th style="font-size: 25px;">Salary</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class="tdata" id="tdata">
+        </tbody>
+    </table>
+    </div>
+    <script src="day06  task1.js"></script>
+    
+</body>
+</html>
